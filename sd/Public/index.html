@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfect Dev Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <style>
+    /* Custom Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .animate-slideIn {
+      animation: slideIn 1s ease forwards;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 via-white to-purple-100 text-gray-800 font-sans overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-purple-600 animate-pulse">Perfect Dev</h1>
+      <nav class="space-x-6 text-gray-700 font-medium">
+        <a href="#projects" class="hover:text-purple-500 transition duration-300">Projects</a>
+        <a href="#about" class="hover:text-purple-500 transition duration-300">About</a>
+        <a href="#contact" class="hover:text-purple-500 transition duration-300">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-purple-100 py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-5xl font-extrabold text-purple-800 mb-4 animate-slideIn">Full-Stack Developer</h2>
+      <p class="text-xl text-purple-900 animate-float">Building Web, Mobile, Desktop & Embedded Systems</p>
+      <a href="#contact" class="mt-8 inline-block bg-purple-600 text-white px-8 py-3 rounded-full text-lg shadow-lg hover:bg-purple-700 transition duration-300">🚀 Hire Me</a>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12 text-gray-800 animate-slideIn">My Projects</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <!-- Web -->
+        <div class="bg-gradient-to-tr from-blue-100 to-white p-6 rounded-2xl shadow-xl hover:scale-105 transform transition duration-500 animate-float">
+          <h4 class="text-xl font-bold mb-2 text-blue-700">Web Applications</h4>
+          <p class="text-gray-600 mb-3">Gmail clone, real-time chat apps, dashboards, and more.</p>
+          <span class="text-sm bg-blue-200 text-blue-800 px-3 py-1 rounded-full">React • Flask • Firebase</span>
+        </div>
+
+        <!-- Mobile -->
+        <div class="bg-gradient-to-tr from-green-100 to-white p-6 rounded-2xl shadow-xl hover:scale-105 transform transition duration-500 animate-float delay-100">
+          <h4 class="text-xl font-bold mb-2 text-green-700">Mobile Apps</h4>
+          <p class="text-gray-600 mb-3">Cross-platform apps like TikTok, Telegram UI clone, and more.</p>
+          <span class="text-sm bg-green-200 text-green-800 px-3 py-1 rounded-full">Flutter • Kotlin • Swift</span>
+        </div>
+
+        <!-- Desktop -->
+        <div class="bg-gradient-to-tr from-yellow-100 to-white p-6 rounded-2xl shadow-xl hover:scale-105 transform transition duration-500 animate-float delay-200">
+          <h4 class="text-xl font-bold mb-2 text-yellow-700">Desktop Software</h4>
+          <p class="text-gray-600 mb-3">Invoicing apps, Photoshop-like editors, inventory systems.</p>
+          <span class="text-sm bg-yellow-200 text-yellow-800 px-3 py-1 rounded-full">Electron • Python • C#</span>
+        </div>
+
+        <!-- Embedded -->
+        <div class="bg-gradient-to-tr from-red-100 to-white p-6 rounded-2xl shadow-xl hover:scale-105 transform transition duration-500 animate-float delay-300">
+          <h4 class="text-xl font-bold mb-2 text-red-700">Embedded Systems</h4>
+          <p class="text-gray-600 mb-3">Software for ATMs, smart TVs, Raspberry Pi, Arduino systems.</p>
+          <span class="text-sm bg-red-200 text-red-800 px-3 py-1 rounded-full">C++ • MicroPython • IoT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center space-y-10 md:space-y-0">
+      <div class="md:w-1/2 animate-slideIn">
+        <img src="https://i.pinimg.com/736x/4a/8d/65/4a8d6510757b9ec5ebbafc13cbd1bfd8.jpg" class="rounded-2xl shadow-xl" alt="Profile" />
+      </div>
+      <div class="md:w-1/2 md:pl-10 animate-slideIn delay-300">
+        <h3 class="text-3xl font-bold mb-4 text-gray-800">Who Am I?</h3>
+        <p class="text-gray-700 mb-4 leading-relaxed">I am a creative and detail-oriented full-stack developer who loves solving real-world problems. I develop smart and fast apps that impact people's daily lives.</p>
+        <ul class="list-disc pl-5 text-gray-600">
+          <li>💻 4+ Years Experience in Coding</li>
+          <li>🌍 Projects for Local & Global Clients</li>
+          <li>🎯 Expert in Scalable System Design</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-purple-600 text-white text-center">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-4 animate-slideIn">Let's Build Something Awesome</h3>
+      <p class="mb-6 animate-float">Got an idea? I'm ready to turn it into reality!</p>
+      <a href="mailto:perfect@example.com" class="bg-white text-purple-700 font-bold px-6 py-3 rounded-full hover:bg-gray-200 transition duration-300 shadow-lg">📧 perfect21@example.com</a>
+    <br><br><p>🌍0987129960</p><p>🌍0903160161</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-400 text-center py-6">
+    <p class="text-sm">© 2025 Perfect Dev | Coded with 💙 using Tailwind CSS & HTML</p>
+  </footer>
+</body>
+</html>
